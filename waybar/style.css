@@ -1,0 +1,58 @@
+@define-color foreground #c4a7e7;
+@define-color background #000000;
+
+* {
+    font-family: JetBrainsMono Nerd Font;
+    font-size: 15px;
+    padding-top: 1px;
+}
+
+#waybar {
+    color: @foreground;
+    background-color: @background;
+}
+
+#workspaces button {
+    color: #999;
+    padding-left: 0.7em;
+}
+#workspaces button.active {
+    color: @foreground;
+}
+
+#cpu {
+    padding-left: 1em;
+}
+
+#memory,
+#temperature {
+    padding-left: 1em
+}
+
+@keyframes blink { 
+    to { 
+        color: @foreground; 
+    } 
+} 
+
+#battery.critical:not(.charging) { 
+    color: #fb4934; 
+    animation-name: blink; 
+    animation-duration: 1s; 
+    animation-timing-function: linear; 
+    animation-iteration-count: infinite; 
+    animation-direction: alternate; 
+}
+
+#pulseaudio,
+#battery,
+#backlight,
+#language,
+#network,
+#bluetooth,
+#tray {
+    padding-right: 1em 
+}
+#tray menu{
+    border-radius: 0;
+}

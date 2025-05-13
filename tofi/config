@@ -1,0 +1,15 @@
+# Catppuccin Frappé
+drun-launch = true
+width = 100%
+height = 100%
+border-width = 0
+outline-width = 0
+padding-left = 35%
+padding-top = 35%
+result-spacing = 25
+num-results = 5
+font = 'JetBrainsMono Nerd Font'
+text-color = #c6d0f5
+prompt-color = #B1B2E6
+selection-color = #C0AB83
+background-color = #000A
