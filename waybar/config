@@ -32,7 +32,8 @@
     },
 
     "clock": {
-        "format": "{:%d.%m.%Y | %H:%M}"
+        "format": "{:%d.%m.%Y | %H:%M}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
     },
 
     "pulseaudio": {
@@ -50,12 +51,12 @@
         "format": "{icon}  {capacity}%",
         "format-charging": " {capacity}%",
         "format-plugged": " {capacity}%",
+        "tooltip-format": "{power:.2}W - {health}% - {cycles} cycles",
         "format-icons": ["\uf244", "\uf243", "\uf242", "\uf241", "\uf240"],
         "states": {
             "warning": 30,
             "critical": 15
-        },
-        "tooltip": false
+        }
     },
 
     "backlight": {
@@ -67,7 +68,6 @@
     "cpu": {
         "interval": 2,
         "format": "  {usage}%",
-        "tooltip": false,
         "on-click": "foot -e btop"
     },
 
@@ -81,6 +81,7 @@
     "temperature": {
         "hwmon-path": "/sys/class/hwmon/hwmon4/temp1_input",
         "critical-threshold": 80,
+        "tooltip": false,
         "format-critical": " {temperatureC}°C",
         "format": " {temperatureC}°C"
     },
